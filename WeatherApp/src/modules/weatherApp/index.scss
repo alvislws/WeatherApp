@@ -1,0 +1,142 @@
+@import "../../css/mixin.scss";
+
+.light-mode {
+  .wrapper {
+    background-image: url("/public/assets/image/bg-light.png");
+
+    .current-weather-info {
+      .header {
+        color: #000000;
+      }
+
+      .current-temp {
+        color: #6c40b5;
+      }
+
+      .min-max-wrapper {
+        p {
+          color: #000000;
+        }
+      }
+
+      .timestamp-wrapper {
+        .location {
+          color: #666666;
+        }
+
+        .right-alignment {
+          p {
+            color: #666666;
+          }
+        }
+      }
+    }
+
+    .error-msg {
+      color: #000000;
+    }
+
+    .card-wrapper {
+      background: #ffffff33;
+
+      .weather-list-wrapper {
+        background: #ffffff33;
+
+        .header {
+          color: #000000;
+        }
+
+        .weather-detail-wrapper {
+          background: #ffffff66;
+
+          .ico-wrapper {
+            .circle-ico-wrapper {
+              background-color: #ffffff;
+
+              .ico-search-dark {
+                background-image: url("/public/assets/image/search-ico-light.png");
+              }
+
+              .ico-delete-dark {
+                background-image: url("/public/assets/image/delete-ico-light.png");
+              }
+            }
+          }
+
+          .loca-timestamp-wrapper {
+            p {
+              color: #000000;
+            }
+          }
+        }
+      }
+    }
+
+    .search-wrapper {
+      .form-switch {
+        color: #000000;
+      }
+      .cta-wrapper {
+        .ico-search-wrapper {
+          background: #6c40b5;
+        }
+      }
+
+      .text-wrapper {
+        input[type="textarea"] {
+          background-color: #ffffff33;
+          color: #000000;
+        }
+
+        input[type="textarea"]:focus {
+          color: #000000;
+        }
+
+        label {
+          color: #00000066 !important;
+        }
+      }
+    }
+  }
+}
+
+.wrapper {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  flex-flow: column;
+  min-height: 100vh;
+  background-image: url("/public/assets/image/bg-dark.png");
+
+  @include bp("desktop") {
+    height: 100%;
+  }
+
+  .error-msg {
+    color: #ffffff;
+    @include common-small-para;
+    text-align: left;
+  }
+
+  .card-wrapper {
+    padding: 2rem;
+    border-radius: 40px;
+    height: max-content;
+    width: 700px;
+    background: #1a1a1a4d;
+    margin-top: 5rem;
+    position: absolute;
+    z-index: 1;
+    top: 120px;
+
+    @include bp("tablet") {
+      width: 700px;
+    }
+
+    @include bp("mobile") {
+      width: 360px;
+    }
+  }
+}

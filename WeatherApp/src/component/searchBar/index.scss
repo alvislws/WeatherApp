@@ -1,0 +1,94 @@
+@import "../../css/mixin.scss";
+
+.search-wrapper {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: center;
+  padding: 0.5rem 1rem;
+
+  .form-switch {
+    margin-left: 10px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    color: #ffffff;
+
+    label {
+      padding-left: 10px;
+    }
+
+    #custom-switch {
+      height: 30px;
+      width: 50px;
+    }
+  }
+
+  .cta-wrapper {
+    display: flex;
+
+    .ico-search-wrapper {
+      width: 55px !important;
+      height: 55px;
+      border-radius: 20px;
+      background: #28124d;
+      margin-left: 10px;
+      cursor: pointer;
+
+      .cta-wrapper {
+        display: flex;
+      }
+      .ico-search {
+        margin-left: 9px;
+        margin-top: 8px;
+      }
+    }
+  }
+
+  .text-wrapper {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 13.62px;
+    width: 600px;
+
+    @include bp("tablet") {
+      width: 700px;
+    }
+
+    @include bp("mobile") {
+      width: 190px;
+    }
+  }
+
+  .form-floating > .form-control:not(:placeholder-shown) {
+    padding-top: 0.825rem;
+    padding-bottom: 0.625rem;
+  }
+
+  input[type="textarea"] {
+    border-radius: 20px;
+    background: #1a1a1a80;
+    border: none;
+    color: #ffffff;
+    @include common-small-para;
+    margin: 1rem 0 0 0;
+  }
+
+  input[type="textarea"]:focus {
+    box-shadow: none !important;
+    background-color: #1a1a1a80;
+    color: #ffffff;
+  }
+
+  /* overriding the css for form float */
+  .form-floating > label {
+    padding: 2rem 0.75rem;
+    color: #ffffff !important;
+    font-size: 13px;
+  }
+
+  .form-floating > .form-control:not(:placeholder-shown) ~ label::after {
+    height: 0;
+  }
+  /* ----------------------------------- */
+}

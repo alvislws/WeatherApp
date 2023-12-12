@@ -1,0 +1,78 @@
+@import "./mixin.scss";
+
+.ico-clouds {
+  background: url("/public/assets/image/cloud.png");
+  background-size: cover;
+  height: 260px;
+  width: 260px;
+  position: relative;
+  z-index: 2;
+  top: 10px;
+  left: 214px;
+
+  @include bp("tablet") {
+    height: 260px;
+    width: 260px;
+    left: 210px;
+    top: 10px;
+  }
+
+  @include bp("mobile") {
+    height: 180px;
+    width: 180px;
+    left: 90px;
+    top: 25px;
+  }
+}
+
+.ico-sun {
+  background: url("/public/assets/image/sun.png");
+  background-size: cover;
+  height: 260px;
+  width: 260px;
+  position: relative;
+  z-index: 2;
+  top: 10px;
+  left: 214px;
+
+  @include bp("tablet") {
+    height: 260px;
+    width: 260px;
+    left: 210px;
+    top: 10px;
+  }
+
+  @include bp("mobile") {
+    height: 180px;
+    width: 180px;
+    left: 90px;
+    top: 25px;
+  }
+}
+
+.ico-search-dark {
+  background: url("/public/assets/image/search-ico-dark.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 16px;
+  width: 16px;
+}
+
+.ico-delete-dark {
+  background: url("/public/assets/image/delete-ico-dark.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 16px;
+  width: 16px;
+}
+
+.ico-search {
+  background: url("/public/assets/image/search-ico.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 34px;
+  height: 34px;
+}

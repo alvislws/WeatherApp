@@ -1,0 +1,51 @@
+@mixin bp($size) {
+  $desktop: "(max-width: 992px)";
+  $tablet: "(max-width: 768px)";
+  $mobile: "(max-width: 767px)";
+
+  @if $size ==desktop {
+    @media only screen and #{$desktop} {
+      @content;
+    }
+  } @else if $size ==mobile {
+    @media only screen and #{$mobile} {
+      @content;
+    }
+  } @else if $size ==tablet {
+    @media only screen and #{$tablet} {
+      @content;
+    }
+  } @else if $size ==tablet {
+    @media only screen and #{$tablet} {
+      @content;
+    }
+  } @else {
+    @media only screen and #{$size} {
+      @content;
+    }
+  }
+}
+
+@mixin common-small-para {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 22px;
+  letter-spacing: 0em;
+  margin: 0;
+}
+
+@mixin mobile-small-para {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 19px;
+  letter-spacing: 0em;
+  margin: 0;
+}
+
+@mixin mobile-small-desc {
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 14px;
+  letter-spacing: 0em;
+  margin: 0;
+}
